@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Download MyApp for Android</title>
+<meta name="description" content="Download the MyApp APK for Android directly from our website.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f2f6f3; --surface:#ffffff; --ink:#14231e; --muted:#53655e; --line:#d5dfd9;
+  --accent:#17614f; --accent-ink:#ffffff; --pop:#ffb703;
+  --head:"Bricolage Grotesque",system-ui,sans-serif;
+  --body:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#0f1815; --surface:#17241f; --ink:#e8f1ec; --muted:#9db1a8; --line:#2a3b34; --accent:#4cc2a1; --accent-ink:#06211a;}
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 var(--body)}
+a{color:var(--accent)}
+:focus-visible{outline:3px solid var(--pop);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+header{padding:20px 0;display:flex;justify-content:space-between;align-items:center}
+.brand{font:800 22px var(--head);letter-spacing:-.01em}
+header a{font-size:15px;text-decoration:none;color:var(--muted)}
+.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:center;padding:48px 0 72px}
+h1{font:800 clamp(40px,6vw,68px)/1.02 var(--head);letter-spacing:-.03em;margin:0 0 20px}
+.lead{font-size:20px;color:var(--muted);max-width:30em;margin:0 0 32px}
+.btn{display:inline-flex;gap:12px;align-items:center;background:var(--accent);color:var(--accent-ink);padding:16px 28px;border-radius:14px;font:600 18px var(--body);text-decoration:none;border:0;cursor:pointer}
+.btn:hover{filter:brightness(1.1)}
+.meta{display:flex;flex-wrap:wrap;gap:8px 24px;margin:20px 0 0;padding:0;list-style:none;color:var(--muted);font-size:15px}
+.meta b{color:var(--ink);font-weight:600}
+.phone{justify-self:center;width:230px}
+.phone img{display:block;width:100%;height:auto}
+section{padding:56px 0;border-top:1px solid var(--line)}
+h2{font:800 clamp(28px,4vw,38px)/1.1 var(--head);letter-spacing:-.02em;margin:0 0 28px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin:0;padding:0;list-style:none;counter-reset:s}
+.steps li{counter-increment:s;padding-top:16px;border-top:4px solid var(--pop)}
+.steps li::before{content:"Step " counter(s);display:block;font:600 14px var(--body);color:var(--muted);margin-bottom:4px}
+.steps h3{margin:0 0 6px;font:800 20px var(--head)}
+.steps p{margin:0;color:var(--muted);font-size:16px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:24px}
+.box h3{margin:0 0 8px;font:800 20px var(--head)}
+.box p{margin:0 0 12px;color:var(--muted)}
+code{display:block;word-break:break-all;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:10px 12px;font:13px/1.5 ui-monospace,Menlo,Consolas,monospace;color:var(--ink)}
+ul.list{margin:0;padding-left:20px;color:var(--muted)}
+details{border-bottom:1px solid var(--line);padding:16px 0}
+summary{cursor:pointer;font-weight:600}
+details p{margin:10px 0 0;color:var(--muted)}
+footer{padding:32px 0 48px;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
+@media (max-width:760px){
+  .hero,.two,.steps{grid-template-columns:1fr}
+  .phone{width:180px;order:-1}
+  .hero{padding-top:16px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand" data-app="name">MyApp</div>
+    <a href="#install">How to install</a>
+  </header>
+
+  <main>
+    <div class="hero">
+      <div>
+        <h1 data-app="tagline">Your app, one tap away.</h1>
+        <p class="lead" data-app="description">Gives users instant step-by-step medical guidance when every second counts.</p>
+        <a class="btn" id="download" href="downloads/EmerGuide.apk" download>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 21h16"/></svg>
+          Download for Android
+        </a>
+        <ul class="meta">
+          <li>Version <b id="version">1.0.0</b></li>
+          <li>Size <b id="size">24 MB</b></li>
+          <li>Android <b id="minos">8.0+</b></li>
+          <li>Updated <b id="updated">Oct 2026</b></li>
+        </ul>
+      </div>
+      <div class="phone" aria-hidden="true">
+        <img src="apploading_screen.png" alt="">
+      </div>
+    </div>
+  </main>
+
+  <section id="install">
+    <h2>Install in three steps</h2>
+    <ol class="steps">
+      <li><h3>Download the file</h3><p>Tap the download button on your Android phone. If your browser warns that the file type can be harmful, choose Download anyway.</p></li>
+      <li><h3>Allow the install</h3><p>Open the file. When Android asks, turn on Allow from this source for your browser. You only do this once.</p></li>
+      <li><h3>Tap Install</h3><p>Wait a few seconds, then tap Open. The app is ready to use.</p></li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>App features</h2>
+    <div class="two">
+      <div class="box">
+        <h3>Emergency Guidance and Contact Directory</h3>
+        <p>Access life-saving emergency guidance and a quick-dial contact directory right when you need it.</p>
+      </div>
+      <div class="box">
+        <h3>APP Features</h3>
+        <ul class="list">
+          <li>Emergency Guide: Provides instant, step-by-step first aid and crisis instructions.</li>
+          <li>Contact Directory: Gives you immediate access to local emergency phone numbers.</li>
+          <li>Safety Education: Delivers vital tips and lessons to keep you prepared for unexpected risks.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Questions</h2>
+    <details><summary>Why isn't this on Google Play?</summary><p>We're a small team and are sharing the app directly while we get started. We plan to publish on the stores later.</p></details>
+    <details><summary>Is it safe to install?</summary><p>Only download from this page. Android scans apps installed from outside the store, and you can verify the file with the checksum above.</p></details>
+    <details><summary>Will I get updates?</summary><p>Not automatically. Come back to this page for new versions. Installing a new version keeps your data.</p></details>
+    <details><summary>I'm on an iPhone</summary><p>This version is for Android only.</p></details>
+    <details><summary>The install is blocked</summary><p>Open Settings, search for Install unknown apps, choose your browser, and turn on Allow from this source. Then open the downloaded file again.</p></details>
+  </section>
+
+  <footer>
+    <span data-app="name">EmerGuide</span> &copy; <span id="year"></span>.
+    Contact: <a id="contact" href="mailto:roblesalvinjohn16@gmail.com">roblesalvinjohn16@gmail.com</a>
+  </footer>
+</div>
+
+<script>
+/* ---- EDIT THESE ---- */
+const APP = {
+  name: "EmerGuide",
+  tagline: "Your app, one tap away.",
+  description: "Gives users instant step-by-step medical guidance when every second counts.",
+  apk: "downloads/EmerGuide.apk",   // path to your APK file
+  version: "1.0.0",
+  size: "251 MB",
+  minAndroid: "10+",
+  updated: "Oct 2026",
+  sha256: "PASTE_THE_64_CHARACTER_RESULT_HERE",
+  contact: "roblesalvinjohn16@gmail.com"
+};
+/* -------------------- */
+document.title = "Download " + APP.name + " for Android";
+document.querySelectorAll("[data-app]").forEach(function(el){ el.textContent = APP[el.dataset.app]; });
+document.getElementById("download").href = APP.apk;
+document.getElementById("version").textContent = APP.version;
+document.getElementById("size").textContent = APP.size;
+document.getElementById("minos").textContent = APP.minAndroid;
+document.getElementById("updated").textContent = APP.updated;
+document.getElementById("sha").textContent = APP.sha256;
+document.getElementById("year").textContent = new Date().getFullYear();
+var c = document.getElementById("contact"); c.href = "mailto:" + APP.contact; c.textContent = APP.contact;
+</script>
+</body>
+</html>
